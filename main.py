@@ -72,7 +72,7 @@ print a
 
 # Exercise 5 : List Overlap
 a = random.sample(xrange(100), random.randint(1, 11))
-b = random.sample(xrange(100), random.randint(1, 11))
+b = random.sample(xrange(100), random.randint(1, 18))
 print a
 print b
 c = [x for x in a if x in b]
@@ -89,3 +89,56 @@ if rvs != a:
 else:
     print "this is a palyndrome word"
 
+
+# Exercise 7 : List Comprehension
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+b = [x for x in a if x%2==0]
+print a
+print b
+
+
+# Exercise 8 : Rock Paper Scissors
+print "Welcome to Rock Paper Scissors game \n play R for Rock, S for Scissors and P for Paper"
+gameover = 1
+while gameover!=0:
+    player1 = input("Player1 your turn : ")
+    player2 = input("Player2 your turn : ")
+    if player1=="R":
+        if player2=="S":
+            print "Player1 wins !"
+        elif player2=="P":
+            print "Player2 wins !"
+        else:
+            print "match nul"
+    elif player1=="S":
+        if player2=="R":
+            print "Player2 wins !"
+        elif player2=="P":
+            print "Player1 wins!"
+        else:
+            print "match nul"
+    elif player1=="P":
+        if player2=="R":
+            print "Player1 wins !"
+        elif player2=="S":
+            print "Player2 wins !"
+        else:
+            print "match nul"
+    else:
+        "You must enter R or S or P"
+    gameover = int(input("enter 0 to quit or anything other integer to continue : "))
+
+# Exercise 9 : Guessing Game One
+while True:
+    the_number = random.randint(1,9)
+    userinput = input("Guess a new number between 1 and 9 : ")
+    if userinput==the_number:
+        print "You guessed exactly right ! congratulations !"
+    elif userinput>the_number:
+        print "Too hight"
+        print "the number was "+str(the_number)
+    else:
+        print "Too low"
+        print "the number was "+str(the_number)
+
+# Exercise 10 : go back to Exercise 5
